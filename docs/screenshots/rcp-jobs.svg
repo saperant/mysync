@@ -31,7 +31,7 @@
 <text x="217.4" y="156.1" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">two-way</text>
 <text x="327.2" y="156.1" fill="#e0e0e0" textLength="134.2" lengthAdjust="spacingAndGlyphs">~/Documents</text>
 <text x="693.2" y="156.1" fill="#e0e0e0" textLength="317.2" lengthAdjust="spacingAndGlyphs">/mnt/backup-disk/Documents</text>
-<text x="1059.2" y="156.1" fill="#e0e0e0" textLength="207.4" lengthAdjust="spacingAndGlyphs">2026-11-10 14:16:</text>
+<text x="1059.2" y="156.1" fill="#e0e0e0" textLength="207.4" lengthAdjust="spacingAndGlyphs">2026-11-10 15:39:</text>
 <text x="1266.6" y="156.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
 <rect x="1278.8" y="137.6" width="683.8" height="25.0" fill="#e0e0e0"/>
 <text x="1278.8" y="156.1" fill="#1e1e1e" textLength="61.0" lengthAdjust="spacingAndGlyphs">Where</text>
@@ -56,7 +56,7 @@
 <text x="217.4" y="229.3" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">two-way</text>
 <text x="327.2" y="229.3" fill="#e0e0e0" textLength="122.0" lengthAdjust="spacingAndGlyphs">~/Projects</text>
 <text x="693.2" y="229.3" fill="#e0e0e0" textLength="256.2" lengthAdjust="spacingAndGlyphs">/srv/archive/Projects</text>
-<text x="1059.2" y="229.3" fill="#e0e0e0" textLength="207.4" lengthAdjust="spacingAndGlyphs">2026-11-10 14:16:</text>
+<text x="1059.2" y="229.3" fill="#e0e0e0" textLength="207.4" lengthAdjust="spacingAndGlyphs">2026-11-10 15:39:</text>
 <text x="1266.6" y="229.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
 <text x="1278.8" y="229.3" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">Right</text>
 <text x="1461.8" y="229.3" fill="#e0e0e0" textLength="475.8" lengthAdjust="spacingAndGlyphs">sftp://me@server.example.org/srv/photos</text>
