@@ -1,11 +1,12 @@
 """mysync in the myrcp workbench: the job list, and a tab per job with its plan.
 
-A port of mysync's Textual TUI (mysync/tui/app.py and tui/select.py) onto the myrcp UI
-IR. The engine calls are the same; only the presentation differs.
+mysync's user interface: the engine (compare, sync, selection) presented through the
+myrcp UI IR, drawn by the terminal or the GTK workbench.
 """
 
 from __future__ import annotations
 
+import os
 import shutil
 import sys
 import tempfile
@@ -30,7 +31,7 @@ try:
 except ImportError as e:
     raise ImportError(
         f"mysync is not importable from {sys.executable} ({e}). Start the workbench with "
-        "mysync-ui (pip install 'mysync[ui]'), or set MYSYNC_PYTHON to a Python that has mysync."
+        "`mysync`, or set MYSYNC_PYTHON to a Python that has mysync."
     ) from e
 
 plugin = Plugin()
@@ -201,6 +202,10 @@ class Jobs(View):
         self.cursor_key: str | None = None
         self.new_job: dict[str, Any] | None = None  # the "new job" dialog, while open
         self.reload()
+        # `mysync ui JOB [--select]`: that job's tab (or its selection), once.
+        kind, _, name = os.environ.pop("MYSYNC_OPEN", "").partition(":")
+        if name and kind in ("job", "select"):
+            self.rcp.open_view("mysync.job" if kind == "job" else "mysync.select", name)
 
     @plugin.command("mysync.jobs.reload")
     def reload(self) -> None:
@@ -1578,10 +1583,8 @@ class SelectView(View):
     """Choose the folders and files the selective side keeps."""
 
     def setup(self) -> None:
-        # tui.select holds the index and the totals; importing it loads Textual too,
-        # which only this view pays for.
         from mysync import selection as selection_mod
-        from mysync.tui.select import build_index, plan_totals
+        from mysync.selection import build_index, plan_totals
 
         self.selection_mod = selection_mod
         self.build_index, self.plan_totals = build_index, plan_totals

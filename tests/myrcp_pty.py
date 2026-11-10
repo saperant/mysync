@@ -1,6 +1,6 @@
-"""mysync-ui in a pseudo-terminal, read back through pyte: for the tests of the myrcp
-plugin that need the real workbench. The workbench is the myrcp wheel's launcher (the
-`test` extra installs it from PyPI), or `myrcp` on $PATH."""
+"""mysync's workbench in a pseudo-terminal, read back through pyte: for the tests of the myrcp
+plugin that need the real workbench. The workbench is the myrcp wheel's launcher (mysync
+depends on it, from PyPI), or `myrcp` on $PATH."""
 
 from __future__ import annotations
 

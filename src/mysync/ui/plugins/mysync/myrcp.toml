@@ -2,7 +2,7 @@
 id = "mysync"
 name = "mysync"
 module = "myrcp_mysync.plugin"
-# It runs in the Python mysync-ui was started with (mysync's), or in $MYSYNC_PYTHON
+# It runs in the Python `mysync` was started with (mysync's), or in $MYSYNC_PYTHON
 # when that is set.
 python = ["$MYSYNC_PYTHON"]
 

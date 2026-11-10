@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1972 977" font-family="Fira Code, DejaVu Sans Mono, monospace" font-size="20">
+<rect width="1972" height="977" rx="8" fill="#292929" stroke="#444"/>
+<circle cx="20" cy="20" r="7" fill="#ff5f57"/><circle cx="42" cy="20" r="7" fill="#febc2e"/><circle cx="64" cy="20" r="7" fill="#28c840"/>
+<text x="986" y="26" fill="#c5c8c6" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold">mysync — the myrcp workbench</text>
+<rect x="10" y="40" width="1952.0" height="927.2" fill="#1e1e1e"/>
+<rect x="10.0" y="40.0" width="208.0" height="25.0" fill="#11a8cd"/>
+<text x="22.2" y="58.5" fill="#1e1e1e" textLength="183.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">mysync ▸ mysync</text>
+<rect x="217.4" y="40.0" width="12.8" height="25.0" fill="#e0e0e0"/>
+<text x="241.8" y="58.5" fill="#e0e0e0" textLength="134.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">1 Sync jobs</text>
+<rect x="388.2" y="40.0" width="891.2" height="25.0" fill="#e0e0e0"/>
+<text x="1266.6" y="58.5" fill="#1e1e1e" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="1278.8" y="40.0" width="171.4" height="25.0" fill="#11a8cd"/>
+<text x="1291.0" y="58.5" fill="#1e1e1e" textLength="146.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">2 Properties</text>
+<rect x="1449.6" y="40.0" width="513.0" height="25.0" fill="#e0e0e0"/>
+<text x="10.0" y="82.9" fill="#666666" textLength="85.4" lengthAdjust="spacingAndGlyphs">Jobs in</text>
+<text x="107.6" y="82.9" fill="#e0e0e0" textLength="366.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">/home/me/.config/mysync/conf.d</text>
+<text x="1266.6" y="82.9" fill="#666666" textLength="61.0" lengthAdjust="spacingAndGlyphs">│From</text>
+<text x="1339.8" y="82.9" fill="#11a8cd" textLength="109.8" lengthAdjust="spacingAndGlyphs">Sync jobs</text>
+<text x="1266.6" y="107.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="107.3" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">photos</text>
+<text x="1376.4" y="107.3" fill="#666666" textLength="122.0" lengthAdjust="spacingAndGlyphs">mysync.job</text>
+<text x="10.0" y="131.7" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Job</text>
+<text x="217.4" y="131.7" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Mode</text>
+<text x="327.2" y="131.7" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Left</text>
+<text x="693.2" y="131.7" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">Right</text>
+<text x="1059.2" y="131.7" fill="#e0e0e0" textLength="109.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Last sync</text>
+<text x="1266.6" y="131.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="131.7" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Property</text>
+<text x="1461.8" y="131.7" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">Value</text>
+<text x="10.0" y="156.1" fill="#e0e0e0" textLength="109.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">documents</text>
+<text x="217.4" y="156.1" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">two-way</text>
+<text x="327.2" y="156.1" fill="#e0e0e0" textLength="134.2" lengthAdjust="spacingAndGlyphs">~/Documents</text>
+<text x="693.2" y="156.1" fill="#e0e0e0" textLength="317.2" lengthAdjust="spacingAndGlyphs">/mnt/backup-disk/Documents</text>
+<text x="1059.2" y="156.1" fill="#e0e0e0" textLength="207.4" lengthAdjust="spacingAndGlyphs">2026-11-10 14:16:</text>
+<text x="1266.6" y="156.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="1278.8" y="137.6" width="683.8" height="25.0" fill="#e0e0e0"/>
+<text x="1278.8" y="156.1" fill="#1e1e1e" textLength="61.0" lengthAdjust="spacingAndGlyphs">Where</text>
+<text x="1461.8" y="156.1" fill="#1e1e1e" textLength="427.0" lengthAdjust="spacingAndGlyphs">.config/mysync/conf.d/photos.toml:1</text>
+<text x="10.0" y="180.5" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">music</text>
+<text x="217.4" y="180.5" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs">update</text>
+<text x="327.2" y="180.5" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">~/Music</text>
+<text x="693.2" y="180.5" fill="#e0e0e0" textLength="219.6" lengthAdjust="spacingAndGlyphs">rclone:cloud:Music</text>
+<text x="1059.2" y="180.5" fill="#666666" textLength="61.0" lengthAdjust="spacingAndGlyphs">never</text>
+<text x="1266.6" y="180.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="180.5" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs">Mode</text>
+<text x="1461.8" y="180.5" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs">mirror</text>
+<rect x="10.0" y="186.4" width="1257.2" height="25.0" fill="#11a8cd"/>
+<text x="10.0" y="204.9" fill="#000000" textLength="73.2" lengthAdjust="spacingAndGlyphs">photos</text>
+<text x="217.4" y="204.9" fill="#000000" textLength="73.2" lengthAdjust="spacingAndGlyphs">mirror</text>
+<text x="327.2" y="204.9" fill="#000000" textLength="122.0" lengthAdjust="spacingAndGlyphs">~/Pictures</text>
+<text x="693.2" y="204.9" fill="#000000" textLength="427.0" lengthAdjust="spacingAndGlyphs">sftp://me@server.example.org/ never</text>
+<text x="1266.6" y="204.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="204.9" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs">Left</text>
+<text x="1461.8" y="204.9" fill="#e0e0e0" textLength="122.0" lengthAdjust="spacingAndGlyphs">~/Pictures</text>
+<text x="10.0" y="229.3" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">projects</text>
+<text x="217.4" y="229.3" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">two-way</text>
+<text x="327.2" y="229.3" fill="#e0e0e0" textLength="122.0" lengthAdjust="spacingAndGlyphs">~/Projects</text>
+<text x="693.2" y="229.3" fill="#e0e0e0" textLength="256.2" lengthAdjust="spacingAndGlyphs">/srv/archive/Projects</text>
+<text x="1059.2" y="229.3" fill="#e0e0e0" textLength="207.4" lengthAdjust="spacingAndGlyphs">2026-11-10 14:16:</text>
+<text x="1266.6" y="229.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="229.3" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">Right</text>
+<text x="1461.8" y="229.3" fill="#e0e0e0" textLength="475.8" lengthAdjust="spacingAndGlyphs">sftp://me@server.example.org/srv/photos</text>
+<text x="1266.6" y="253.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="253.7" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs">Compare</text>
+<text x="1461.8" y="253.7" fill="#e0e0e0" textLength="109.8" lengthAdjust="spacingAndGlyphs">time-size</text>
+<text x="1266.6" y="278.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="278.1" fill="#e0e0e0" textLength="109.8" lengthAdjust="spacingAndGlyphs">Conflicts</text>
+<text x="1461.8" y="278.1" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">ask</text>
+<text x="1266.6" y="302.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="302.5" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">Deletion</text>
+<text x="1461.8" y="302.5" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">trash</text>
+<text x="1266.6" y="326.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="326.9" fill="#e0e0e0" textLength="109.8" lengthAdjust="spacingAndGlyphs">Last sync</text>
+<text x="1461.8" y="326.9" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">never</text>
+<text x="1266.6" y="351.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="351.3" fill="#e0e0e0" textLength="134.2" lengthAdjust="spacingAndGlyphs">Description</text>
+<text x="1461.8" y="351.3" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">—</text>
+<text x="1266.6" y="375.7" fill="#666666" textLength="36.6" lengthAdjust="spacingAndGlyphs">│┌─</text>
+<text x="1315.4" y="375.7" fill="#e0e0e0" textLength="134.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">photos.toml</text>
+<text x="1461.8" y="375.7" fill="#666666" textLength="500.2" lengthAdjust="spacingAndGlyphs">────────────────────────────────────────┐</text>
+<text x="1266.6" y="400.1" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<rect x="1291.0" y="381.6" width="659.4" height="25.0" fill="#e0e0e0"/>
+<text x="1303.2" y="400.1" fill="#1e1e1e" textLength="207.4" lengthAdjust="spacingAndGlyphs">1 mode = &quot;mirror&quot;</text>
+<text x="1949.8" y="400.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="424.5" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1303.2" y="424.5" fill="#e0e0e0" textLength="256.2" lengthAdjust="spacingAndGlyphs">2 left = &quot;~/Pictures&quot;</text>
+<text x="1949.8" y="424.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="448.9" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1303.2" y="448.9" fill="#e0e0e0" textLength="622.2" lengthAdjust="spacingAndGlyphs">3 right = &quot;sftp://me@server.example.org/srv/photos&quot;</text>
+<text x="1949.8" y="448.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="473.3" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1949.8" y="473.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="497.7" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1949.8" y="497.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="522.1" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1949.8" y="522.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="546.5" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1949.8" y="546.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="570.9" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1949.8" y="570.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="595.3" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1949.8" y="595.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="619.7" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1949.8" y="619.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="644.1" fill="#666666" textLength="24.4" lengthAdjust="spacingAndGlyphs">││</text>
+<text x="1949.8" y="644.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="668.5" fill="#11a8cd" textLength="97.6" lengthAdjust="spacingAndGlyphs">[ Open ]</text>
+<text x="119.8" y="668.5" fill="#11a8cd" textLength="134.2" lengthAdjust="spacingAndGlyphs">[ New job ]</text>
+<text x="266.2" y="668.5" fill="#11a8cd" textLength="97.6" lengthAdjust="spacingAndGlyphs">[ Edit ]</text>
+<text x="376.0" y="668.5" fill="#11a8cd" textLength="122.0" lengthAdjust="spacingAndGlyphs">[ Reload ]</text>
+<text x="1266.6" y="668.5" fill="#666666" textLength="695.4" lengthAdjust="spacingAndGlyphs">│└──────────────────────────────────────────────────────┘</text>
+<text x="10.0" y="692.9" fill="#11a8cd" textLength="61.0" lengthAdjust="spacingAndGlyphs">Enter</text>
+<text x="83.2" y="692.9" fill="#666666" textLength="48.8" lengthAdjust="spacingAndGlyphs">open</text>
+<text x="168.6" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">n</text>
+<text x="193.0" y="692.9" fill="#666666" textLength="85.4" lengthAdjust="spacingAndGlyphs">new job</text>
+<text x="315.0" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">e</text>
+<text x="339.4" y="692.9" fill="#666666" textLength="48.8" lengthAdjust="spacingAndGlyphs">edit</text>
+<text x="424.8" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">r</text>
+<text x="449.2" y="692.9" fill="#666666" textLength="73.2" lengthAdjust="spacingAndGlyphs">reload</text>
+<text x="1266.6" y="692.9" fill="#666666" textLength="427.0" lengthAdjust="spacingAndGlyphs">│Enter opens the line in the editor</text>
+<rect x="10.0" y="698.8" width="12.8" height="25.0" fill="#e0e0e0"/>
+<rect x="22.2" y="698.8" width="147.0" height="25.0" fill="#11a8cd"/>
+<text x="34.4" y="717.3" fill="#1e1e1e" textLength="122.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">3 Problems</text>
+<rect x="168.6" y="698.8" width="1794.0" height="25.0" fill="#e0e0e0"/>
+<text x="10.0" y="741.7" fill="#666666" textLength="353.8" lengthAdjust="spacingAndGlyphs">0 errors, 0 warnings, 0 other</text>
+<text x="107.6" y="766.1" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">Where</text>
+<text x="803.0" y="766.1" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">Problem</text>
+<text x="1840.0" y="766.1" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">From</text>
+<text x="22.2" y="790.5" fill="#666666" textLength="256.2" lengthAdjust="spacingAndGlyphs">No problems reported.</text>
+<text x="10.0" y="936.9" fill="#666666" textLength="744.2" lengthAdjust="spacingAndGlyphs">Enter opens the place (the editor, or the view that shows it)</text>
+<rect x="10.0" y="942.8" width="1415.8" height="25.0" fill="#e0e0e0"/>
+<rect x="1425.2" y="942.8" width="37.2" height="25.0" fill="#11a8cd"/>
+<text x="1425.2" y="961.3" fill="#1e1e1e" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Tab</text>
+<rect x="1461.8" y="942.8" width="98.2" height="25.0" fill="#e0e0e0"/>
+<text x="1474.0" y="961.3" fill="#1e1e1e" textLength="61.0" lengthAdjust="spacingAndGlyphs">focus</text>
+<rect x="1559.4" y="942.8" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1559.4" y="961.3" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">F6</text>
+<rect x="1583.8" y="942.8" width="110.4" height="25.0" fill="#e0e0e0"/>
+<text x="1596.0" y="961.3" fill="#1e1e1e" textLength="73.2" lengthAdjust="spacingAndGlyphs">region</text>
+<rect x="1693.6" y="942.8" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1693.6" y="961.3" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">^P</text>
+<rect x="1718.0" y="942.8" width="134.8" height="25.0" fill="#e0e0e0"/>
+<text x="1730.2" y="961.3" fill="#1e1e1e" textLength="97.6" lengthAdjust="spacingAndGlyphs">commands</text>
+<rect x="1852.2" y="942.8" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1852.2" y="961.3" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">^Q</text>
+<rect x="1876.6" y="942.8" width="86.0" height="25.0" fill="#e0e0e0"/>
+<text x="1888.8" y="961.3" fill="#1e1e1e" textLength="48.8" lengthAdjust="spacingAndGlyphs">quit</text>
+</svg>

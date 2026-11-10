@@ -206,9 +206,7 @@ def _selection_path(job: config_mod.JobConfig, given: str) -> str:
 def cmd_select(args) -> int:
     job = _selective_job(args.job)
     if not (args.keep or args.drop or args.list):
-        from mysync.tui.app import MysyncApp
-        MysyncApp(initial_job=job.name, select=True).run()
-        return EXIT_OK
+        return _workbench([], open_=f"select:{job.name}")
     sel = selection_mod.load(job)
     changes = [(_selection_path(job, g), True) for g in args.keep or []]
     changes += [(_selection_path(job, g), False) for g in args.drop or []]
@@ -257,10 +255,27 @@ def cmd_paths(_args) -> int:
     return EXIT_OK
 
 
-def cmd_tui(args) -> int:
-    from mysync.tui.app import MysyncApp
-    MysyncApp(initial_job=getattr(args, "job", None)).run()
-    return EXIT_OK
+def _workbench(args: list[str], open_: str | None = None) -> int:
+    """Replace this process with the myrcp workbench showing mysync (mysync.ui)."""
+    from mysync.ui import run
+
+    if open_:
+        os.environ["MYSYNC_OPEN"] = open_  # the job list opens it once it is up
+    run(args)
+    return EXIT_OK  # not reached
+
+
+def cmd_ui(args) -> int:
+    """`mysync ui [JOB] [--select] [--gtk] [-- workbench options]`."""
+    if args.gtk:
+        os.environ["MYRCP_GTK"] = "1"
+    open_ = (f"select:{args.job}" if args.select else f"job:{args.job}") if args.job else None
+    if args.select and not args.job:
+        _err("--select needs a job")
+        return EXIT_FATAL
+    if args.job:
+        config_mod.find_job(args.job)  # an unknown job is an error here, not in the workbench
+    return _workbench(args.workbench, open_)
 
 
 _EXIT_CODES = """\
@@ -322,7 +337,8 @@ examples:
   mysync new photos --left ~/Pictures --right sftp://server/srv/photos -e
   mysync compare photos           show what would happen
   mysync sync photos -q           synchronize, e.g. from cron or a systemd timer
-  mysync                          choose a job in the TUI
+  mysync                          the workbench: jobs, plans, selections
+  mysync ui photos                ... with this job open and compared
 
 jobs are TOML files in ~/.config/mysync/conf.d/ ('mysync paths' shows all
 locations); every option is described in the README.
@@ -331,10 +347,15 @@ locations); every option is described in the README.
     p.add_argument("--version", action="version", version=f"mysync {__version__}")
     sub = p.add_subparsers(dest="command", title="commands", metavar="COMMAND")
 
-    s = _sub(sub, "tui", "start the terminal user interface (default)",
-             "Start the terminal user interface.  Everything works with the mouse and the keyboard.")
+    s = _sub(sub, "ui", "start the user interface (default)",
+             "Start mysync in the myrcp workbench (https://github.com/saperant/myrcp): the\n"
+             "job list, a tab per job with its plan, the selection of selective jobs.  It\n"
+             "runs in the terminal; --gtk uses the GTK workbench when it is installed.\n"
+             "Options after -- go to the workbench itself, e.g. `mysync ui -- --list`.")
     s.add_argument("job", nargs="?", help="open this job directly and compare it")
-    s.set_defaults(func=cmd_tui)
+    s.add_argument("--select", action="store_true", help="open the job's selection (selective sync)")
+    s.add_argument("--gtk", action="store_true", help="the GTK workbench (myrcp-gtk) instead of the terminal")
+    s.set_defaults(func=cmd_ui, workbench=[])
 
     s = _sub(sub, "list", "list configured jobs and when they last ran")
     s.set_defaults(func=cmd_list)
@@ -431,8 +452,15 @@ example:
 
 
 def main(argv: list[str] | None = None) -> int:
+    argv = list(sys.argv[1:] if argv is None else argv) or ["ui"]
+    workbench: list[str] = []
+    if argv[0] == "ui" and "--" in argv:  # the rest is the workbench's
+        i = argv.index("--")
+        argv, workbench = argv[:i], argv[i + 1:]
     args = build_parser().parse_args(argv)
-    func = getattr(args, "func", cmd_tui)
+    if argv[0] == "ui":
+        args.workbench = workbench
+    func = args.func
     try:
         return func(args)
     except (config_mod.ConfigError, SyncError) as e:

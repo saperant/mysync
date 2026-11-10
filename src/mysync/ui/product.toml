@@ -1,5 +1,5 @@
-# mysync in the myrcp workbench (https://github.com/saperant/myrcp), started by the
-# mysync-ui command (pip install 'mysync[ui]').
+# mysync in the myrcp workbench (https://github.com/saperant/myrcp), started by `mysync`
+# (or `mysync ui`).
 [product]
 id = "mysync"
 name = "mysync"

@@ -30,15 +30,15 @@ jobs:
           unzip -q -j "$RUNNER_TEMP/rclone.zip" "*/rclone" -d "$RUNNER_TEMP/bin"
           echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
           "$RUNNER_TEMP/bin/rclone" version | head -1
-      # The test extra brings the myrcp wheel from PyPI, for the myrcp plugin's tests.
+      # mysync depends on the myrcp wheel from PyPI: the workbench and its plugin SDK.
       - name: Install
         run: |
           python -m venv .venv
           .venv/bin/pip install --quiet -e '.[test]'
       - name: Test
         run: .venv/bin/pytest -q -rs
-      - name: mysync-ui starts (headless)
-        run: XDG_STATE_HOME=$RUNNER_TEMP MYSYNC_CONFIG_DIR=$RUNNER_TEMP/conf .venv/bin/mysync-ui --list
+      - name: The workbench starts (headless)
+        run: XDG_STATE_HOME=$RUNNER_TEMP MYSYNC_CONFIG_DIR=$RUNNER_TEMP/conf .venv/bin/mysync ui -- --list
 
   release:
     # A tag v*: the wheel and the sdist attached to a GitHub release of that tag.

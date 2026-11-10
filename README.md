@@ -1,28 +1,40 @@
 # mysync
 
-Two-way folder synchronization with a terminal UI (mouse supported) and TOML
-configuration.  Locations can be local folders, SFTP, SSH, or anything rclone
-can reach (Google Drive, OneDrive, Dropbox, S3, …).
+Two-way folder synchronization with TOML configuration.  Locations can be local
+folders, SFTP, SSH, or anything rclone can reach (Google Drive, OneDrive, Dropbox,
+S3, …).  Its user interface is a plugin of [myrcp](https://github.com/saperant/myrcp),
+a workbench in the terminal (or GTK): the job list, a tab per job with its plan,
+the selection of selective jobs, and conflicts in the Problems view, next to your
+editor, terminals and other tools.  myrcp comes from PyPI with mysync, so there is
+nothing to build.
 
 ```
 pip install git+https://github.com/saperant/mysync
-mysync                  # start the TUI
+mysync                  # the workbench: choose a job, compare, synchronize
+mysync sync photos -q   # or from the command line, cron or a systemd timer
 ```
 
-### In the myrcp workbench
+## Screenshots
 
-The same jobs and engine also run as a plugin of [myrcp](https://github.com/saperant/myrcp),
-a terminal workbench: the job list and one tab per job with its plan, next to your
-editor, terminals and other tools.  The `ui` extra brings myrcp from PyPI, so there
-is nothing to build:
+A job's plan in the terminal workbench: what changed on each side since the last sync,
+a folder renamed on the left, a file deleted there, and a conflict (also in Problems):
 
-```
-pip install 'mysync[ui] @ git+https://github.com/saperant/mysync'
-mysync-ui               # the workbench with mysync in it
-```
+![A job's plan in the terminal workbench](docs/screenshots/rcp-plan.svg)
 
-`=` on a plan row opens the two copies in `$MYRCP_DIFF` (vimdiff by default), `e`
-edits a job in a tab, and conflicts appear in the Problems view.
+Selective sync: the archive keeps every project, the laptop only the selected ones.
+The next sync downloads the greenhouse and frees the boat trailer's local copy:
+
+![The selection of a selective job](docs/screenshots/rcp-selection.svg)
+
+The same in the GTK workbench (`mysync ui --gtk`):
+
+![A job's plan in the GTK workbench](docs/screenshots/gtk-plan.png)
+
+![The selection in the GTK workbench](docs/screenshots/gtk-selection.png)
+
+More: [the job list](docs/screenshots/rcp-jobs.svg), [a selective job's plan](docs/screenshots/rcp-selective-plan.svg),
+and in GTK [the job list](docs/screenshots/gtk-jobs.png) and [the selective plan](docs/screenshots/gtk-selective-plan.png).
+`tools/screenshots/make.sh` makes them again, from a made-up home in a sandbox.
 
 ## Why another sync tool?
 
@@ -64,7 +76,7 @@ edits a job in a tab, and conflicts appear in the Problems view.
 mode = "two-way"          # two-way | mirror (left -> right) | update (left -> right, never deletes)
 compare = "time-size"     # time-size | size | content (SHA-256)
 time_tolerance = 2        # seconds; covers FAT and SFTP whole-second timestamps
-conflict = "ask"          # ask (decide in the TUI; skipped by the CLI) | skip | newer | left | right
+conflict = "ask"          # ask (decide in the workbench; skipped by the CLI) | skip | newer | left | right
 deletion = "trash"        # trash | delete
 trash_keep_days = 30      # purge trash sessions older than this (0 = keep)
 symlinks = "skip"         # skip | follow | links (see "Symbolic links")
@@ -185,7 +197,7 @@ such names instead of treating them as two files:
 * Each side keeps its own spelling. New files go into the folder as the
   other side spells it, and state files record each side's names.
 * A rename that changes only case or Unicode form (`notes.txt` → `Notes.txt`)
-  is repeated on the other side (`Aa▶`/`◀Aa` in the TUI, `Aa>`/`<Aa` in the CLI).
+  is repeated on the other side (`Aa▶`/`◀Aa` in the workbench, `Aa>`/`<Aa` in the CLI).
   Mirror and update give the right the left's spelling. Without previous state the
   spelling is only adjusted along with a copy, and is otherwise left as it is.
 * Names that cannot be paired, such as `a.txt` and `A.txt` next to each other while
@@ -218,14 +230,13 @@ not supported on rclone remotes.
   (local disks, `df` on ssh/sftp servers, rclone remotes that report it). A sync that would
   copy more data to a side than it can hold is refused. Deletions and overwritten files only
   count as freed space with `deletion = "delete"`, because the trash lives on the same location.
-  `--force` (or "Synchronize anyway" in the TUI) overrides this, like the deletion limit.
+  `--force` (or "Synchronize anyway" in the workbench) overrides this, like the deletion limit.
 * **Retries.** Items that fail (e.g. after a dropped connection) are tried
   again at the end of the run, in up to `retries` rounds, waiting `retry_delay`
   seconds before each. Lost sftp connections are reopened first. Items that changed
-  meanwhile are never retried; they need a new comparison.  In the TUI, **Retry
-  failed** in the progress dialog runs the remaining failures again.
+  meanwhile are never retried; they need a new comparison.
 * **One run per job.** A lock in `$XDG_RUNTIME_DIR/mysync/` prevents two
-  runs of the same folder pair (e.g. cron and the TUI) from overlapping. The lock
+  runs of the same folder pair (e.g. cron and the workbench) from overlapping. The lock
   file is removed when the run ends, whether it succeeded or failed, and the kernel releases the lock if
   the process dies.  The lock is per machine: two different machines syncing against
   the same server are not coordinated.
@@ -260,7 +271,7 @@ only some of them), mark the side that keeps a selection:
 selective = "left"        # the left side keeps only the selection; the right holds everything
 ```
 
-`mysync select <job>` (or **Selection…** / `t` in the job screen) opens a tree
+`mysync select <job>` (or `t` in the job's tab) opens a tree
 of both sides. Click a box (or press Space) to select or deselect a folder or file;
 click a folder name, its arrow, or press Enter to open it. The summary shows how
 much the next sync will download and free.  Saving writes
@@ -293,7 +304,7 @@ mysync select projects --keep Archive/2019         # bring it back (or --drop, -
 ### Post-sync command
 
 `post_sync_command` is run with `sh -c` after every synchronization (CLI and
-TUI), also when nothing was to do or the run failed, e.g. to send a notification:
+workbench), also when nothing was to do or the run failed, e.g. to send a notification:
 
 ```toml
 post_sync_command = 'notify-send "mysync $MYSYNC_JOB" "$MYSYNC_STATUS: $MYSYNC_DONE done, $MYSYNC_FAILED failed"'
@@ -325,30 +336,36 @@ rclone = "~/bin/rclone"
 
 ## Using it
 
-**TUI** (`mysync`, or `mysync tui <job>`): select a job and press Enter, click it again or press **Open**;
-it is compared right away.  The table shows both sides, the planned action and the reason.
+**The workbench** (`mysync`, or `mysync ui <job>` to open a job, `mysync ui <job> --select`
+for its selection, `--gtk` for the GTK workbench when myrcp-gtk is installed): open a job
+with Enter; it is compared right away.  A job's tab shows both sides, the planned action
+and the reason, as a folder tree (`f` switches to a flat list).  `Ctrl+P` lists every
+command; the `mysync` perspective puts the jobs, Properties (what the cursor is on) and
+Problems (open conflicts) side by side.
 
-* Click the **Action** cell, or press `a`, to cycle through possible actions.
+* `a` cycles through the possible actions of a row.
 * **Space** ignores the highlighted (or marked) rows for this round only:
   nothing is done to them, they disappear from the list, and their last
-  synchronized state is kept, so the next comparison shows the same changes again.  A folder takes its content along; a folder that would be
-  deleted but holds ignored items is kept.  The "– ignored" checkbox shows them
-  again, and Space takes them back.  Comparing again (also after a sync) clears it;
-  the job file is not changed.
-* **→ / ←** (or `>` / `<`, or the ──▶ ◀── buttons) choose the direction: make the
-  right like the left, or the reverse.  That is a copy, or a deletion where the
-  item exists only on the other side; planned renames and time-only updates are kept.
-* **Several rows at once:** click the narrow first column or Ctrl+click a row to mark it,
-  Shift+click to mark a range; on the keyboard `m` (or Insert) marks and moves down,
-  Shift+↑/↓ extends the marking, Ctrl+A marks all shown rows, Escape clears the marks.
-  Directions, the buttons (✖◀ ▶✖ Skip Default), `x` (skip) and `d` (default) apply
-  to all marked rows, or to the highlighted row when nothing is marked.
-* Click a highlighted row (or press Enter) for details and choices.
-* After a run with failures, **Retry failed** in the progress dialog tries them again.
+  synchronized state is kept, so the next comparison shows the same changes again.
+  A folder takes its content along; a folder that would be deleted but holds ignored
+  items is kept.  The "– ignored" checkbox shows them again, and Space takes them back.
+  Comparing again (also after a sync) clears it; the job file is not changed.
+* `>` / `<` choose the direction: make the right like the left, or the reverse.  That
+  is a copy, or a deletion where the item exists only on the other side; planned
+  renames and time-only updates are kept.
+* **Several rows at once:** `m` (or Insert) marks a row and moves down, Shift+↑/↓
+  extends the marking, Ctrl+A marks all shown rows, Escape clears the marks.
+  Directions, `x` (skip) and `d` (default) apply to all marked rows, or to the
+  highlighted row when nothing is marked.
+* Enter (or `i`) shows a row's details and choices; `=` opens the two copies in
+  `$MYRCP_DIFF` (vimdiff by default).
 * Renames are shown as `mv▶`/`◀mv`; their source rows and the contents of
   renamed folders are listed under "equal/details". Time/permission-only updates are `at▶`/`◀at`.
-* `n` resolves all open conflicts in favour of the newer side; `e` edits the job in `$EDITOR`.
-* Checkboxes filter what is shown.  F5 compares, F9 synchronizes (with a summary to confirm).
+* `n` resolves all open conflicts in favour of the newer side; `e` edits the job in
+  your editor, and the job is read again when you close it.  `t` opens the selection
+  of a selective job.
+* Checkboxes filter what is shown.  `c` (F5) compares, `s` (F9) synchronizes, with a
+  summary to confirm.
 
 **CLI** (for cron/systemd timers):
 
@@ -386,9 +403,8 @@ list every option with examples, the plan symbols and the exit codes.
 
 ## License
 
-MIT, see [LICENSE](LICENSE).  Dependencies: Textual and Rich (MIT), Paramiko
-(LGPL-2.1, used as an unmodified library); rclone (MIT) is an optional external
-program.
+MIT, see [LICENSE](LICENSE).  Dependencies: myrcp (MIT), Paramiko (LGPL-2.1, used
+as an unmodified library); rclone (MIT) is an optional external program.
 
 ## Development
 
@@ -412,7 +428,7 @@ retry round. The `df` script itself is tested with the local shell.
   for such a target.
 * **Filters and case.** `include`/`exclude` patterns are matched against each side's
   own spelling and are always case-sensitive, even when names are paired ignoring case.
-* **Choosing a name fix by hand.** The TUI can skip a name fix, which keeps both spellings
+* **Choosing a name fix by hand.** The workbench can skip a name fix, which keeps both spellings
   and shows the rename again next time, but cannot reverse its direction.
   Without previous state a spelling difference is only fixed along with a copy.
 * **Retries take time.** With the default `retries = 2`, `retry_delay = 5`, a run
@@ -426,7 +442,7 @@ retry round. The `df` script itself is tested with the local shell.
 * **Reconnecting.** Before each retry round a dropped sftp connection is
   reopened. ssh runs every command through its multiplexed connection, which
   reconnects by itself.
-* **post_sync_command runs to the end.** The run (and the TUI dialog) waits for it.
+* **post_sync_command runs to the end.** The run (also in the workbench) waits for it.
   Start long tasks in the background (`some-script &`).
 
 ## Not yet implemented
@@ -435,7 +451,7 @@ retry round. The `df` script itself is tested with the local shell.
 * Locking across machines that sync against the same server.
 * Native Google Drive / OneDrive / Dropbox backends (rclone covers them today).
 * File names containing control characters on rclone remotes (rclone re-encodes them).
-* Size/date filters, scheduled runs from the TUI.
+* Size/date filters, scheduled runs from the workbench.
 * Selective sync over plain ssh still lists the whole remote tree (the unselected
   parts are filtered afterwards); placeholders for unselected files (as in OneDrive's
   "online-only" files) are not possible without a virtual file system.

@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1972 977" font-family="Fira Code, DejaVu Sans Mono, monospace" font-size="20">
+<rect width="1972" height="977" rx="8" fill="#292929" stroke="#444"/>
+<circle cx="20" cy="20" r="7" fill="#ff5f57"/><circle cx="42" cy="20" r="7" fill="#febc2e"/><circle cx="64" cy="20" r="7" fill="#28c840"/>
+<text x="986" y="26" fill="#c5c8c6" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold">mysync — projects</text>
+<rect x="10" y="40" width="1952.0" height="927.2" fill="#1e1e1e"/>
+<rect x="10.0" y="40.0" width="208.0" height="25.0" fill="#11a8cd"/>
+<text x="22.2" y="58.5" fill="#1e1e1e" textLength="183.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">mysync ▸ mysync</text>
+<rect x="217.4" y="40.0" width="354.4" height="25.0" fill="#e0e0e0"/>
+<text x="241.8" y="58.5" fill="#1e1e1e" textLength="134.2" lengthAdjust="spacingAndGlyphs">1 Sync jobs</text>
+<text x="400.4" y="58.5" fill="#1e1e1e" textLength="158.6" lengthAdjust="spacingAndGlyphs">4 ⇄ documents</text>
+<text x="583.4" y="58.5" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">5 ⇄ projects</text>
+<rect x="742.0" y="40.0" width="537.4" height="25.0" fill="#e0e0e0"/>
+<text x="1266.6" y="58.5" fill="#1e1e1e" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="1278.8" y="40.0" width="171.4" height="25.0" fill="#11a8cd"/>
+<text x="1291.0" y="58.5" fill="#1e1e1e" textLength="146.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">2 Properties</text>
+<rect x="1449.6" y="40.0" width="513.0" height="25.0" fill="#e0e0e0"/>
+<text x="10.0" y="82.9" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">projects</text>
+<text x="132.0" y="82.9" fill="#666666" textLength="1195.6" lengthAdjust="spacingAndGlyphs">two-way, compare by time-size, conflicts: ask, deletion: trash, selective sync: the left keep│From</text>
+<text x="1339.8" y="82.9" fill="#11a8cd" textLength="122.0" lengthAdjust="spacingAndGlyphs">⇄ projects</text>
+<text x="10.0" y="107.3" fill="#0dbc79" textLength="12.2" lengthAdjust="spacingAndGlyphs">L</text>
+<text x="34.4" y="107.3" fill="#e0e0e0" textLength="122.0" lengthAdjust="spacingAndGlyphs">~/Projects</text>
+<text x="1266.6" y="107.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="107.3" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">2023/</text>
+<text x="1364.2" y="107.3" fill="#666666" textLength="134.2" lengthAdjust="spacingAndGlyphs">mysync.path</text>
+<text x="10.0" y="131.7" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">R</text>
+<text x="34.4" y="131.7" fill="#e0e0e0" textLength="256.2" lengthAdjust="spacingAndGlyphs">/srv/archive/Projects</text>
+<text x="1266.6" y="131.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="131.7" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Property</text>
+<text x="1461.8" y="131.7" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">Value</text>
+<text x="10.0" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">[</text>
+<text x="22.2" y="156.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">x</text>
+<text x="34.4" y="156.1" fill="#e0e0e0" textLength="170.8" lengthAdjust="spacingAndGlyphs">] ──▶ to right</text>
+<text x="229.6" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">[</text>
+<text x="241.8" y="156.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">x</text>
+<text x="254.0" y="156.1" fill="#e0e0e0" textLength="158.6" lengthAdjust="spacingAndGlyphs">] ◀── to left</text>
+<text x="437.0" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">[</text>
+<text x="449.2" y="156.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">x</text>
+<text x="461.4" y="156.1" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">] mv renames</text>
+<text x="632.2" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">[</text>
+<text x="644.4" y="156.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">x</text>
+<text x="656.6" y="156.1" fill="#e0e0e0" textLength="231.8" lengthAdjust="spacingAndGlyphs">] ✖ deletes/⏏ frees</text>
+<text x="912.8" y="156.1" fill="#e0e0e0" textLength="12.2" lengthAdjust="spacingAndGlyphs">[</text>
+<text x="925.0" y="156.1" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">x</text>
+<text x="937.2" y="156.1" fill="#e0e0e0" textLength="158.6" lengthAdjust="spacingAndGlyphs">] ? conflicts</text>
+<text x="1120.2" y="156.1" fill="#e0e0e0" textLength="146.4" lengthAdjust="spacingAndGlyphs">[ ] = equal/</text>
+<text x="1266.6" y="156.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="1278.8" y="137.6" width="683.8" height="25.0" fill="#e0e0e0"/>
+<text x="1278.8" y="156.1" fill="#1e1e1e" textLength="48.8" lengthAdjust="spacingAndGlyphs">Left</text>
+<text x="1461.8" y="156.1" fill="#1e1e1e" textLength="12.2" lengthAdjust="spacingAndGlyphs">—</text>
+<text x="34.4" y="180.5" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Left</text>
+<text x="424.8" y="180.5" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">Path</text>
+<text x="754.2" y="180.5" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">Right</text>
+<text x="1144.6" y="180.5" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs" font-weight="bold">Reason</text>
+<text x="1266.6" y="180.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="180.5" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs">Right</text>
+<text x="1461.8" y="180.5" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">&lt;folder&gt;</text>
+<rect x="10.0" y="186.4" width="1257.2" height="25.0" fill="#11a8cd"/>
+<text x="10.0" y="204.9" fill="#000000" textLength="12.2" lengthAdjust="spacingAndGlyphs">·</text>
+<text x="424.8" y="204.9" fill="#000000" textLength="85.4" lengthAdjust="spacingAndGlyphs">▶ 2023/</text>
+<text x="693.2" y="204.9" fill="#000000" textLength="36.6" lengthAdjust="spacingAndGlyphs">◀──</text>
+<text x="754.2" y="204.9" fill="#000000" textLength="97.6" lengthAdjust="spacingAndGlyphs">&lt;folder&gt;</text>
+<text x="1144.6" y="204.9" fill="#000000" textLength="122.0" lengthAdjust="spacingAndGlyphs">created on</text>
+<text x="1266.6" y="204.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="204.9" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs">Action</text>
+<text x="1461.8" y="204.9" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs">&lt;-copy</text>
+<text x="10.0" y="229.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">·</text>
+<text x="34.4" y="229.3" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">&lt;folder&gt;</text>
+<text x="424.8" y="229.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">▼</text>
+<text x="449.2" y="229.3" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">2025/</text>
+<text x="705.4" y="229.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">=</text>
+<text x="754.2" y="229.3" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">&lt;folder&gt;</text>
+<text x="1266.6" y="229.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="229.3" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">Category</text>
+<text x="1461.8" y="229.3" fill="#e0e0e0" textLength="122.0" lengthAdjust="spacingAndGlyphs">right-only</text>
+<text x="10.0" y="253.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">·</text>
+<text x="34.4" y="253.7" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">&lt;folder&gt;</text>
+<text x="449.2" y="253.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">▼</text>
+<text x="473.6" y="253.7" fill="#e0e0e0" textLength="158.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">boat-trailer/</text>
+<text x="693.2" y="253.7" fill="#e5e510" textLength="24.4" lengthAdjust="spacingAndGlyphs">⏏◀</text>
+<text x="754.2" y="253.7" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">&lt;folder&gt;</text>
+<text x="1144.6" y="253.7" fill="#666666" textLength="134.2" lengthAdjust="spacingAndGlyphs">not select│</text>
+<text x="1278.8" y="253.7" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs">Reason</text>
+<text x="1461.8" y="253.7" fill="#e0e0e0" textLength="195.2" lengthAdjust="spacingAndGlyphs">created on right</text>
+<text x="10.0" y="278.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">·</text>
+<text x="58.8" y="278.1" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">87.9 KiB</text>
+<text x="180.8" y="278.1" fill="#666666" textLength="231.8" lengthAdjust="spacingAndGlyphs">2025-04-02 12:00:00</text>
+<text x="498.0" y="278.1" fill="#e0e0e0" textLength="109.8" lengthAdjust="spacingAndGlyphs">parts.ods</text>
+<text x="693.2" y="278.1" fill="#e5e510" textLength="24.4" lengthAdjust="spacingAndGlyphs">⏏◀</text>
+<text x="778.6" y="278.1" fill="#666666" textLength="97.6" lengthAdjust="spacingAndGlyphs">87.9 KiB</text>
+<text x="900.6" y="278.1" fill="#666666" textLength="231.8" lengthAdjust="spacingAndGlyphs">2025-04-02 12:00:00</text>
+<text x="1144.6" y="278.1" fill="#666666" textLength="134.2" lengthAdjust="spacingAndGlyphs">not select│</text>
+<text x="1278.8" y="278.1" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">Conflict</text>
+<text x="1461.8" y="278.1" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">no</text>
+<text x="10.0" y="302.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">·</text>
+<text x="71.0" y="302.5" fill="#666666" textLength="85.4" lengthAdjust="spacingAndGlyphs">3.7 MiB</text>
+<text x="180.8" y="302.5" fill="#666666" textLength="231.8" lengthAdjust="spacingAndGlyphs">2025-05-15 12:00:00</text>
+<text x="498.0" y="302.5" fill="#e0e0e0" textLength="134.2" lengthAdjust="spacingAndGlyphs">welding.mp4</text>
+<text x="693.2" y="302.5" fill="#e5e510" textLength="24.4" lengthAdjust="spacingAndGlyphs">⏏◀</text>
+<text x="790.8" y="302.5" fill="#666666" textLength="85.4" lengthAdjust="spacingAndGlyphs">3.7 MiB</text>
+<text x="900.6" y="302.5" fill="#666666" textLength="231.8" lengthAdjust="spacingAndGlyphs">2025-05-15 12:00:00</text>
+<text x="1144.6" y="302.5" fill="#666666" textLength="134.2" lengthAdjust="spacingAndGlyphs">not select│</text>
+<text x="1278.8" y="302.5" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs">Marked</text>
+<text x="1461.8" y="302.5" fill="#e0e0e0" textLength="24.4" lengthAdjust="spacingAndGlyphs">no</text>
+<text x="1266.6" y="326.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1278.8" y="326.9" fill="#e0e0e0" textLength="36.6" lengthAdjust="spacingAndGlyphs">Job</text>
+<text x="1461.8" y="326.9" fill="#e0e0e0" textLength="97.6" lengthAdjust="spacingAndGlyphs">projects</text>
+<text x="1266.6" y="351.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="375.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="400.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="424.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="448.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="473.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="497.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="522.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="546.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="570.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="595.3" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="1266.6" y="619.7" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="644.1" fill="#0dbc79" textLength="61.0" lengthAdjust="spacingAndGlyphs">──▶ 0</text>
+<text x="107.6" y="644.1" fill="#11a8cd" textLength="61.0" lengthAdjust="spacingAndGlyphs">◀── 4</text>
+<text x="205.2" y="644.1" fill="#bc3fbc" textLength="48.8" lengthAdjust="spacingAndGlyphs">mv 0</text>
+<text x="290.6" y="644.1" fill="#2472c8" textLength="73.2" lengthAdjust="spacingAndGlyphs">attr 0</text>
+<text x="400.4" y="644.1" fill="#cd3131" textLength="48.8" lengthAdjust="spacingAndGlyphs">✖◀ 0</text>
+<text x="485.8" y="644.1" fill="#cd3131" textLength="48.8" lengthAdjust="spacingAndGlyphs">▶✖ 0</text>
+<text x="571.2" y="644.1" fill="#e5e510" textLength="134.2" lengthAdjust="spacingAndGlyphs">conflicts 0</text>
+<text x="742.0" y="644.1" fill="#e0e0e0" textLength="73.2" lengthAdjust="spacingAndGlyphs">skip 0</text>
+<text x="851.8" y="644.1" fill="#e0e0e0" textLength="195.2" lengthAdjust="spacingAndGlyphs">transfer 6.7 MiB</text>
+<text x="1083.6" y="644.1" fill="#e5e510" textLength="170.8" lengthAdjust="spacingAndGlyphs">⏏ free 3.8 MiB</text>
+<text x="1266.6" y="644.1" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="668.5" fill="#666666" textLength="512.4" lengthAdjust="spacingAndGlyphs">5 shown of 13; state from 2026-11-10 14:16</text>
+<text x="1266.6" y="668.5" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="10.0" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">c</text>
+<text x="34.4" y="692.9" fill="#666666" textLength="85.4" lengthAdjust="spacingAndGlyphs">compare</text>
+<text x="156.4" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">s</text>
+<text x="180.8" y="692.9" fill="#666666" textLength="48.8" lengthAdjust="spacingAndGlyphs">sync</text>
+<text x="266.2" y="692.9" fill="#11a8cd" textLength="36.6" lengthAdjust="spacingAndGlyphs">&lt;/&gt;</text>
+<text x="315.0" y="692.9" fill="#666666" textLength="109.8" lengthAdjust="spacingAndGlyphs">direction</text>
+<text x="461.4" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">-</text>
+<text x="485.8" y="692.9" fill="#666666" textLength="48.8" lengthAdjust="spacingAndGlyphs">skip</text>
+<text x="571.2" y="692.9" fill="#11a8cd" textLength="36.6" lengthAdjust="spacingAndGlyphs">←/→</text>
+<text x="620.0" y="692.9" fill="#666666" textLength="48.8" lengthAdjust="spacingAndGlyphs">fold</text>
+<text x="705.4" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">f</text>
+<text x="729.8" y="692.9" fill="#666666" textLength="48.8" lengthAdjust="spacingAndGlyphs">flat</text>
+<text x="815.2" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">m</text>
+<text x="839.6" y="692.9" fill="#666666" textLength="48.8" lengthAdjust="spacingAndGlyphs">mark</text>
+<text x="925.0" y="692.9" fill="#11a8cd" textLength="61.0" lengthAdjust="spacingAndGlyphs">space</text>
+<text x="998.2" y="692.9" fill="#666666" textLength="73.2" lengthAdjust="spacingAndGlyphs">ignore</text>
+<text x="1108.0" y="692.9" fill="#11a8cd" textLength="12.2" lengthAdjust="spacingAndGlyphs">a</text>
+<text x="1132.4" y="692.9" fill="#666666" textLength="61.0" lengthAdjust="spacingAndGlyphs">cycle</text>
+<text x="1230.0" y="692.9" fill="#11a8cd" textLength="36.6" lengthAdjust="spacingAndGlyphs">Ent</text>
+<text x="1266.6" y="692.9" fill="#666666" textLength="12.2" lengthAdjust="spacingAndGlyphs">│</text>
+<rect x="10.0" y="698.8" width="12.8" height="25.0" fill="#e0e0e0"/>
+<rect x="22.2" y="698.8" width="147.0" height="25.0" fill="#11a8cd"/>
+<text x="34.4" y="717.3" fill="#1e1e1e" textLength="122.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">3 Problems</text>
+<rect x="168.6" y="698.8" width="1794.0" height="25.0" fill="#e0e0e0"/>
+<text x="10.0" y="741.7" fill="#666666" textLength="353.8" lengthAdjust="spacingAndGlyphs">0 errors, 1 warnings, 0 other</text>
+<text x="107.6" y="766.1" fill="#e0e0e0" textLength="61.0" lengthAdjust="spacingAndGlyphs" font-weight="bold">Where</text>
+<text x="803.0" y="766.1" fill="#e0e0e0" textLength="85.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">Problem</text>
+<text x="1840.0" y="766.1" fill="#e0e0e0" textLength="48.8" lengthAdjust="spacingAndGlyphs" font-weight="bold">From</text>
+<rect x="10.0" y="772.0" width="1952.6" height="25.0" fill="#e0e0e0"/>
+<text x="10.0" y="790.5" fill="#1e1e1e" textLength="317.2" lengthAdjust="spacingAndGlyphs">warning Documents/todo.txt</text>
+<text x="803.0" y="790.5" fill="#1e1e1e" textLength="719.8" lengthAdjust="spacingAndGlyphs">documents: todo.txt: modified on left and modified on right</text>
+<text x="1840.0" y="790.5" fill="#1e1e1e" textLength="73.2" lengthAdjust="spacingAndGlyphs">mysync</text>
+<text x="10.0" y="936.9" fill="#666666" textLength="744.2" lengthAdjust="spacingAndGlyphs">Enter opens the place (the editor, or the view that shows it)</text>
+<rect x="10.0" y="942.8" width="1415.8" height="25.0" fill="#e0e0e0"/>
+<rect x="1425.2" y="942.8" width="37.2" height="25.0" fill="#11a8cd"/>
+<text x="1425.2" y="961.3" fill="#1e1e1e" textLength="36.6" lengthAdjust="spacingAndGlyphs" font-weight="bold">Tab</text>
+<rect x="1461.8" y="942.8" width="98.2" height="25.0" fill="#e0e0e0"/>
+<text x="1474.0" y="961.3" fill="#1e1e1e" textLength="61.0" lengthAdjust="spacingAndGlyphs">focus</text>
+<rect x="1559.4" y="942.8" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1559.4" y="961.3" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">F6</text>
+<rect x="1583.8" y="942.8" width="110.4" height="25.0" fill="#e0e0e0"/>
+<text x="1596.0" y="961.3" fill="#1e1e1e" textLength="73.2" lengthAdjust="spacingAndGlyphs">region</text>
+<rect x="1693.6" y="942.8" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1693.6" y="961.3" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">^P</text>
+<rect x="1718.0" y="942.8" width="134.8" height="25.0" fill="#e0e0e0"/>
+<text x="1730.2" y="961.3" fill="#1e1e1e" textLength="97.6" lengthAdjust="spacingAndGlyphs">commands</text>
+<rect x="1852.2" y="942.8" width="25.0" height="25.0" fill="#11a8cd"/>
+<text x="1852.2" y="961.3" fill="#1e1e1e" textLength="24.4" lengthAdjust="spacingAndGlyphs" font-weight="bold">^Q</text>
+<rect x="1876.6" y="942.8" width="86.0" height="25.0" fill="#e0e0e0"/>
+<text x="1888.8" y="961.3" fill="#1e1e1e" textLength="48.8" lengthAdjust="spacingAndGlyphs">quit</text>
+</svg>

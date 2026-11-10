@@ -73,6 +73,19 @@ def test_the_plugin_runs_in_this_python(setup):
         p.close()
 
 
+def test_mysync_open_shows_the_job(setup):
+    """`mysync ui t` (MYSYNC_OPEN=job:t): the job list opens the job's tab; select: its selection."""
+    tmp, _, _, env = setup
+    for open_, view in (("job:t", "mysync.job#t"), ("select:t", "mysync.select#t")):
+        p = Peer(tmp, python=MYSYNC_PYTHON, env=dict(env, MYRCP_HOST_PLUGINS="mysync", MYSYNC_OPEN=open_))
+        try:
+            p.request("initialize", {"protocol": 1})
+            p.request("view.open", {"view": "mysync.jobs"})
+            assert p.wait_notify("view.show") == {"view": view}
+        finally:
+            p.close()
+
+
 def test_compare_and_sync(setup):
     tmp, _left, right, env = setup
     p = Peer(tmp, python=MYSYNC_PYTHON, env=dict(env, MYRCP_HOST_PLUGINS="mysync"))

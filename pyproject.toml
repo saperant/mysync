@@ -5,26 +5,23 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mysync"
 version = "0.9.0"
-description = "Two-way folder synchronization with a terminal UI (local, SFTP, SSH, rclone remotes)"
+description = "Two-way folder synchronization (local, SFTP, SSH, rclone remotes) in the myrcp workbench"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Saku Rantamäki" }]
 dependencies = [
-    "textual>=0.80",
     "paramiko>=3.4",
+    "myrcp>=0.9.1",  # the user interface: the myrcp workbench, from PyPI
 ]
 
 [project.optional-dependencies]
-# The user interface on the myrcp workbench: the mysync-ui command.
-ui = ["myrcp>=0.9"]
-# The myrcp wheel from PyPI for the plugin's tests, pyte for those in a terminal.
-test = ["pytest>=8", "pytest-asyncio>=0.23", "myrcp>=0.9", "pyte>=0.8"]
+# pyte reads the workbench's screen in the tests that run it in a terminal.
+test = ["pytest>=8", "pyte>=0.8"]
 
 [project.scripts]
 mysync = "mysync.cli:main"
-mysync-ui = "mysync.ui:main"
 
 [project.urls]
 Homepage = "https://github.com/saperant/mysync"
@@ -35,11 +32,8 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-asyncio_mode = "auto"
-asyncio_default_fixture_loop_scope = "function"
 
 # The myrcp product: its manifest and the plugin, which the plugin host imports from
 # its directory (not as mysync's own subpackage).
 [tool.setuptools.package-data]
-mysync = ["tui/*.tcss"]
 "mysync.ui" = ["product.toml", "plugins/*/myrcp.toml", "plugins/*/*/*.py"]

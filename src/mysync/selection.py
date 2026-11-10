@@ -30,6 +30,7 @@ from pathlib import Path
 
 from mysync import paths
 from mysync.config import ConfigError, JobConfig
+from mysync.model import DIR, FILE, Entry
 
 ALL, NONE, SOME = "all", "none", "some"
 
@@ -150,3 +151,73 @@ def save(job: JobConfig, sel: Selection) -> Path:
         Path(tmp).unlink(missing_ok=True)
         raise
     return path
+
+
+# ---- the tree of both sides, for choosing a selection ---------------------------
+
+
+@dataclass
+class SizeNode:
+    """A file or folder of the selection tree, with the total sizes beneath it."""
+
+    path: str
+    is_dir: bool
+    full_size: int = 0  # on the side that holds everything
+    local_size: int = 0  # on the selective side
+    full: bool = False  # exists on the full side
+    local: bool = False  # exists on the selective side
+    children: list[str] = field(default_factory=list)
+
+
+def build_index(full: dict[str, Entry], local: dict[str, Entry]) -> dict[str, SizeNode]:
+    """Folder tree of both sides with total sizes per folder."""
+    nodes: dict[str, SizeNode] = {"": SizeNode("", True, full=True, local=True)}
+
+    def node_for(path: str, is_dir: bool) -> SizeNode:
+        node = nodes.get(path)
+        if node is None:
+            parent = path.rsplit("/", 1)[0] if "/" in path else ""
+            node_for(parent, True).children.append(path)
+            node = nodes[path] = SizeNode(path, is_dir)
+        return node
+
+    for scan, is_full in ((full, True), (local, False)):
+        for path in sorted(scan):
+            e = scan[path]
+            node = node_for(path, e.kind == DIR)
+            if is_full:
+                node.full = True
+            else:
+                node.local = True
+            if e.kind != FILE:
+                continue
+            p = path
+            while True:
+                if is_full:
+                    nodes[p].full_size += e.size
+                else:
+                    nodes[p].local_size += e.size
+                if not p:
+                    break
+                p = p.rsplit("/", 1)[0] if "/" in p else ""
+    for node in nodes.values():
+        node.children.sort(key=lambda c: (not nodes[c].is_dir, c.lower()))
+    return nodes
+
+
+def plan_totals(nodes: dict[str, SizeNode], full: dict[str, Entry], local: dict[str, Entry],
+                sel: Selection) -> tuple[int, int, int, int]:
+    """(selected size, total size, to download, to free) for the summary."""
+    selected = total = download = free = 0
+    for path, e in full.items():
+        if e.kind != FILE:
+            continue
+        total += e.size
+        if sel.is_selected(path):
+            selected += e.size
+            if path not in local:
+                download += e.size
+    for path, e in local.items():
+        if e.kind == FILE and not sel.is_selected(path):
+            free += e.size
+    return selected, total, download, free
