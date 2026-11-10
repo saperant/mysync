@@ -1,0 +1,213 @@
+[plugin]
+id = "mysync"
+name = "mysync"
+module = "myrcp_mysync.plugin"
+# It runs in the Python mysync-ui was started with (mysync's), or in $MYSYNC_PYTHON
+# when that is set.
+python = ["$MYSYNC_PYTHON"]
+
+[[views]]
+id = "mysync.jobs"
+title = "Sync jobs"
+startup = true
+
+[[views]]
+id = "mysync.job"  # one tab per job: mysync.job#<name>
+title = "Sync"
+
+# A perspective: the jobs; a job opens beside them, what the cursor is on at the side, the
+# problems below. Perspective: mysync (Ctrl+P) switches to it.
+[[perspectives]]
+id = "mysync"
+title = "mysync"
+main = ["mysync.jobs"]
+side = ["properties"]
+bottom = ["problems"]
+
+# ---- the job list ----------------------------------------------------------------
+
+[[commands]]
+id = "mysync.jobs.new"
+title = "Sync: New job"
+key = "n"
+view = "mysync.jobs"
+
+[[commands]]
+id = "mysync.jobs.edit"
+title = "Sync: Edit job file"
+key = "e"
+view = "mysync.jobs"
+
+[[commands]]
+id = "mysync.jobs.reload"
+title = "Sync: Reload jobs"
+key = "r"
+view = "mysync.jobs"
+
+# ---- a job ---------------------------------------------------------------------------
+
+[[commands]]
+id = "mysync.job.compare"
+title = "Sync: Compare"
+key = ["c", "f5"]
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.sync"
+title = "Sync: Synchronize"
+key = ["s", "f9"]
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.right"
+title = "Sync: Make the right like the left"
+key = [">", "."]
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.left"
+title = "Sync: Make the left like the right"
+key = ["<", ","]
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.tree"
+title = "Sync: Tree of folders / flat list"
+key = "f"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.expandAll"
+title = "Sync: Open all folders"
+key = "*"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.collapseAll"
+title = "Sync: Close all folders"
+key = "/"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.mark"
+title = "Sync: Mark row"
+key = ["m", "insert"]
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.markDown"
+title = "Sync: Extend marking down"
+key = "shift+down"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.markUp"
+title = "Sync: Extend marking up"
+key = "shift+up"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.markAll"
+title = "Sync: Mark all shown rows"
+key = "ctrl+a"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.unmark"
+title = "Sync: Clear marks"
+key = "escape"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.ignore"
+title = "Sync: Ignore this time / take back"
+key = "space"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.cycle"
+title = "Sync: Cycle action"
+key = "a"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.details"
+title = "Sync: Details and choices"
+key = "i"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.diff"
+title = "Sync: Compare the two copies"
+key = "="
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.default"
+title = "Sync: Default action"
+key = "d"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.skip"
+title = "Sync: Skip"
+key = ["x", "-"]
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.deleteLeft"
+title = "Sync: Delete on the left"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.deleteRight"
+title = "Sync: Delete on the right"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.newer"
+title = "Sync: Conflicts: newer side wins"
+key = "n"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.edit"
+title = "Sync: Edit job file"
+key = "e"
+view = "mysync.job"
+
+[[commands]]
+id = "mysync.job.selection"
+title = "Sync: Selection (selective sync)"
+key = "t"
+view = "mysync.job"
+
+# ---- the selection (selective sync) ----------------------------------------------
+
+[[views]]
+id = "mysync.select"  # mysync.select#<job>
+title = "Selection"
+
+[[commands]]
+id = "mysync.select.save"
+title = "Selection: Save"
+key = ["ctrl+s", "w"]
+view = "mysync.select"
+
+[[commands]]
+id = "mysync.select.everything"
+title = "Selection: Select all"
+key = "a"
+view = "mysync.select"
+
+[[commands]]
+id = "mysync.select.expandAll"
+title = "Selection: Expand all"
+key = "*"
+view = "mysync.select"
+
+[[commands]]
+id = "mysync.select.back"
+title = "Selection: Back to the job"
+key = ["q", "escape"]
+view = "mysync.select"

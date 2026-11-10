@@ -1,0 +1,7 @@
+# mysync in the myrcp workbench (https://github.com/saperant/myrcp), started by the
+# mysync-ui command (pip install 'mysync[ui]').
+[product]
+id = "mysync"
+name = "mysync"
+version = "0.9.0"
+plugins = ["plugins"]
